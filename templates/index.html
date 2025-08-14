@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VK HR Tek - Магазин бонусов</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="icon" type="image/x-icon" href="static/images/vk.ico">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <img src="static/images/logo.png" alt="VK HR Tek Logo">
+            <span>VK HR Tek - Магазин бонусов и бенефитов</span>
+        </div>
+        <a href="#" class="vk-login-button">
+            <img src="static/images/vk.ico" alt="VK Icon">
+            Вход через VK ID
+        </a>
+    </header>
+    
+    <div class="container">
+        <div class="balance" onclick="showTooltip()">
+            Ваши баллы: <span id="points">0</span>
+        <span class="tooltip">Баллы начисляются за выполнение задач, реферальные программы и участие в корпоративных инициативах</span>
+        </div>
+        
+        <div class="benefits-list">
+            <div class="benefit-card coffee-voucher" data-name="Coffee voucher" data-price="50">
+                <h3>Coffee voucher</h3>
+                <div class="price">250 баллов</div>
+                <button onclick="buyBenefit(this)">Купить</button>
+            </div>
+            <div class="benefit-card extra-day-off" data-name="Extra day off" data-price="200">
+                <h3>Extra day off</h3>
+                <div class="price">3000 баллов</div>
+                <button onclick="buyBenefit(this)">Купить</button>
+            </div>
+            <div class="benefit-card gym-membership" data-name="Gym membership month" data-price="300">
+                <h3>Gym membership month</h3>
+                <div class="price">2000 баллов</div>
+                <button onclick="buyBenefit(this)">Купить</button>
+            </div>
+            <div class="benefit-card online-course" data-name="Online course access" data-price="150">
+                <h3>Online course access</h3>
+                <div class="price">1500 баллов</div>
+                <button onclick="buyBenefit(this)">Купить</button>
+            </div>
+        </div>
+        
+        <div class="owned-benefits">
+            <h2>Ваши приобретенные бонусы</h2>
+            <ul id="owned-list"></ul>
+        </div>
+    </div>
+
+    <script src="static/script.js"></script>
+</body>
+</html>
